@@ -1,148 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>Sudharshan - లెర్నింగ్ కమ్యూనిటీ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Noto Sans Telugu',sans-serif;
+  background:
+    radial-gradient(circle at top,#09202a 0%,#03070a 38%,#000 75%);
+  color:#fff;
+}
+
+.card{
+  width:100%;
+  max-width:360px;
+  padding:22px 18px 18px;
+  text-align:center;
+  background:rgba(7,15,20,.94);
+  border:1px solid rgba(38,183,255,.35);
+  border-radius:26px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.65),
+    0 0 35px rgba(0,174,255,.08);
+  backdrop-filter:blur(12px);
+}
+
+/* Logo */
+.logo-wrap{
+  width:104px;
+  height:104px;
+  margin:0 auto 13px;
+  padding:3px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#20bfff,#1677ff);
+  box-shadow:0 0 25px rgba(32,191,255,.25);
+}
+
+.profile-img{
+  width:100%;
+  height:100%;
+  display:block;
+  border-radius:50%;
+  object-fit:cover;
+  background:#071117;
+}
+
+/* Heading */
+h1{
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:5px;
+}
+
+.subtitle{
+  color:#8ea0aa;
+  font-size:11px;
+  margin-bottom:20px;
+}
+
+/* Features */
+.features{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  text-align:left;
+}
+
+.feature-item{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:11px 12px;
+  border-radius:13px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.055);
+  color:#dce5e9;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.icon{
+  width:29px;
+  height:29px;
+  flex:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  background:rgba(25,175,255,.10);
+  font-size:14px;
+}
+
+/* Join text */
+.join-text{
+  margin:19px 5px 11px;
+  color:#aebcc3;
+  font-size:11px;
+  line-height:1.6;
+}
+
+/* CTA */
+.telegram-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  padding:13px 15px;
+  border-radius:13px;
+  background:linear-gradient(135deg,#179ee8,#087fc5);
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 8px 22px rgba(0,145,220,.22);
+  transition:.2s ease;
+}
+
+.telegram-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 25px rgba(0,145,220,.32);
+}
+
+.telegram-icon{
+  font-size:17px;
+}
+
+/* Quote */
+.telugu-quote{
+  margin:15px 8px 12px;
+  color:#788991;
+  font-size:10px;
+  line-height:1.7;
+}
+
+/* Footer */
+.footer{
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+.footer-links{
+  color:#66767e;
+  font-size:8px;
+  line-height:1.7;
+}
+
+.disclaimer{
+  margin-top:5px;
+  color:#4f5d63;
+  font-size:8px;
+  line-height:1.5;
+}
+
+/* Small phones */
+@media(max-width:360px){
+  body{
+    padding:10px;
   }
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
+  .card{
+    padding:18px 14px 15px;
+    border-radius:23px;
   }
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
+  .logo-wrap{
+    width:90px;
+    height:90px;
   }
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  h1{
+    font-size:20px;
   }
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
+  .feature-item{
+    padding:9px 10px;
+    font-size:11px;
   }
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
+  .join-text{
+    margin-top:16px;
   }
-
-  .feature-item:last-child { border-bottom: none; }
-
-  .icon { margin-right: 12px; font-size: 16px; }
-
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
-
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
-
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+}
 </style>
 </head>
+
 <body>
 
 <div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
 
-  <h1>Munaaf</h1>
+  <div class="logo-wrap">
+    <img
+      src="https://i.ibb.co/wFDB3K0r/file-00000000042082118fe7a499b75debc8.png"
+      alt="Sudharshan"
+      class="profile-img"
+    >
+  </div>
+
+  <h1>Sudharshan</h1>
+
+  <p class="subtitle">లెర్నింగ్ & విద్యా కమ్యూనిటీ</p>
 
   <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
+
+    <div class="feature-item">
+      <span class="icon">📚</span>
+      <span>లెర్నింగ్ & విద్యా సెషన్స్</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="icon">📊</span>
+      <span>మార్కెట్ కాన్సెప్ట్స్ & అవగాహన</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="icon">📈</span>
+      <span>చార్ట్ రీడింగ్ కాన్సెప్ట్స్</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="icon">💡</span>
+      <span>విద్యా సంబంధిత కేస్ చర్చలు</span>
+    </div>
+
   </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+  <p class="join-text">
+    మా లెర్నింగ్ కమ్యూనిటీలో చేరి కొత్త విషయాలను నేర్చుకోండి
+  </p>
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+  <a
+    href="https://t.me/+p7XQlJ_FzsczNzE1"
+    class="telegram-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span class="telegram-icon">✈</span>
+    JOIN TELEGRAM
+  </a>
 
-  <p class="hindi-quote">     ,     </p>
+  <p class="telugu-quote">
+    నిరంతర అభ్యాసం మరియు కృషి ద్వారా
+    మీ జ్ఞానాన్ని మరింత మెరుగుపరుచుకోండి.
+  </p>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+  <div class="footer">
+    <div class="footer-links">
+      నిబంధనలు &nbsp;|&nbsp; గోప్యత &nbsp;|&nbsp; డిస్క్లైమర్
+    </div>
+
+    <div class="disclaimer">
+      ఈ సైట్ Facebook™లో భాగం కాదు మరియు Facebook™చే
+      ఆమోదించబడలేదు.
+    </div>
   </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
 </div>
 
 </body>
